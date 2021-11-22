@@ -1,0 +1,16 @@
+<h1>
+  <div *ngIf="user.age >= 20; else under20">Tris hon 20 tuoi</div>
+  <ng-template #under20> Tris small under 20</ng-template>
+</h1>
+
+<h3>
+  <button (click)="user.age = user.age - 1">-</button>
+  Age : {{ user.age }}
+  <button (click)="user.age = user.age + 1">+</button>
+</h3>
+
+<div class="phepCong">
+  <input class="inputT" type="number" [(ngModel)]="a" />
+  <input class="inputT" type="number" [(ngModel)]="b" />
+  <h1>= {{ phepCong(a, b) }}</h1>
+</div>
